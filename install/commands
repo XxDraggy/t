@@ -1,0 +1,3 @@
+rustup default stable
+chsh -s usr/bin/zsh
+git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.config/zsh/antidote
