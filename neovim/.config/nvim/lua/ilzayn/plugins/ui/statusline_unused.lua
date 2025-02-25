@@ -1,9 +1,9 @@
 local function width_less_than(width)
-  return function() return vim.opt.columns <= width end
+  return function() return vim.opt.columns._value <= width end
 end
 
 local function width_more_than(width)
-  return function() return vim.opt.columns > width end
+  return function() return vim.opt.columns._value > width end
 end
 
 return {

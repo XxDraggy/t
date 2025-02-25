@@ -20,12 +20,12 @@ local nordic = {
 
     local lualine_nordic = {
       normal = {
-        a = { bg = palette.orange.bright, fg = palette.black0, gui = 'bold' },
+        a = { bg = palette.green.bright, fg = palette.black0, gui = 'bold' },
         b = { bg = palette.gray1, fg = palette.white1 },
         c = { bg = palette.bg_statusline, fg = palette.white0 },
       },
       insert = {
-        a = { bg = palette.green.bright, fg = palette.black0, gui = 'bold' },
+        a = { bg = palette.blue1, fg = palette.black0, gui = 'bold' },
         b = { bg = palette.gray1, fg = palette.white1 },
         c = { bg = palette.bg_statusline, fg = palette.white0 },
       },
@@ -45,7 +45,7 @@ local nordic = {
         c = { bg = palette.bg_statusline, fg = palette.white0 },
       },
       terminal = {
-        a = { bg = palette.blue2, fg = palette.black0, gui = 'bold' },
+        a = { bg = palette.orange.bright, fg = palette.black0, gui = 'bold' },
         b = { bg = palette.gray1, fg = palette.white1 },
         c = { bg = palette.bg_statusline, fg = palette.white0 },
       },

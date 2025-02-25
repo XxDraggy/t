@@ -1,4 +1,3 @@
-# TODO: colors
 "$schema" = "https://starship.rs/config-schema.json"
 
 palette = "nordic"
@@ -34,24 +33,26 @@ purple = "#B48EAD"
 bright-purple = "#C895BF"
 
 [hostname]
-format = "[](fg:bright-orange)[  $hostname ]($style)[](fg:bright-orange)"
-style = "fg:bright-black bg:bright-orange"
+format = """[](fg:bright-orange)[](fg:bright-black bg:bright-orange)[](fg:bright-orange bg:grey)\
+[ $hostname ]($style)[](fg:grey)"""
+style = "fg:white bg:grey"
 
 [username]
-format = "[](fg:yellow)[  $user ]($style)[](fg:yellow)"
-style_root = "fg:bright-black bg:yellow"
-style_user = "fg:bright-black bg:yellow"
+format = """[](fg:yellow)[](fg:bright-black bg:yellow)[](fg:yellow bg:grey)\
+[ $user ]($style)[](fg:grey)"""
+style_root = "fg:white bg:grey"
+style_user = "fg:white bg:grey"
 show_always = true
 
 [custom.folder_symbol]
 command = 'git rev-parse --is-inside-work-tree &>/dev/null && echo "󰊢" || echo ""'
-format = "[](fg:green)[ $output]($style)"
+format = "[](fg:green)[$output]($style)[](fg:green bg:grey)"
 style = "fg:bright-black bg:green"
 when = true
 
 [directory]
-format = "[ $path ($read_only )]($style)[](fg:green)"
-style = "fg:bright-black bg:green"
+format = "[ $path ($read_only )]($style)[](fg:grey)"
+style = "fg:white bg:grey"
 read_only = "󰌾"
 truncation_symbol = "…/"
 
@@ -59,13 +60,17 @@ truncation_symbol = "…/"
 symbol = " "
 
 [git_branch]
-format = "([](fg:blue)[ $symbol $branch(:$remote_branch) ]($style)[](fg:blue))"
+format = """([](fg:blue)[$symbol](fg:bright-black bg:blue)[](fg:blue bg:grey)\
+[ $branch(:$remote_branch) ]($style)[](fg:grey))"""
 symbol =""
-style = "fg:bright-black bg:blue"
+style = "fg:white bg:grey"
 
 [git_status]
-format = "([](fg:purple)[( $staged)( $untracked)( $deleted)( $modified)( $renamed)( $stashed)( $conflicted)( $diverged)( $ahead)( $behind) ]($style)[](fg:purple))"
-style = "fg:bright-black bg:purple"
+format = """([](fg:purple)[](fg:bright-black bg:purple)[](fg:purple bg:grey)\
+[( $staged)( $untracked)( $deleted)( $modified)( $renamed)( $stashed)\
+( $conflicted)( $diverged)( $ahead)( $behind) ]($style)\
+[](fg:grey))"""
+style = "fg:white bg:grey"
 ahead = "⇡"
 behind = "⇣"
 conflicted = ""
@@ -85,3 +90,6 @@ style = "fg:bright-grey"
 success_symbol = "[➜](fg:white)"
 error_symbol = "[➜](fg:white)"
 vimcmd_symbol = "[➜](fg:white)"
+vimcmd_replace_symbol = "[➜](fg:white)"
+vimcmd_replace_one_symbol = "[➜](fg:white)"
+vimcmd_visual_symbol = "[➜](fg:white)"

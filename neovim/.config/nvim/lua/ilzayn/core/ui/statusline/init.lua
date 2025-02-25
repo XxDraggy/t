@@ -33,10 +33,13 @@ function M.statusline()
 
   return table.concat({
     mode,
-    space,
+    utils.width_more_than(35)
+      and space
+      or "%=",
     file,
-    "%=",
-    line,
+    utils.width_more_than(35)
+      and "%=" .. line
+      or ""
   })
 end
 

@@ -36,7 +36,7 @@ return {
             icon = "",
             desc = "Explore Files",
             key = "e",
-            action = "-",
+            action = "<CMD>Oil --float<CR>",
           },
           {
             icon = "",

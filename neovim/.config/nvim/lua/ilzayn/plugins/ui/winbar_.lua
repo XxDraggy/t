@@ -37,13 +37,15 @@ return {
 
       return {
         { "", group = highlight_group_separator },
-        icon and { ' ', icon } or '',
-        ' ',
-        filename,
-        modified and { ' ' } or '',
-        ' ',
+        {
+          icon and { ' ', icon } or '',
+          ' ',
+          filename,
+          modified and { ' ' } or '',
+          ' ',
+          group = highlight_group
+        },
         { "", group = highlight_group_separator },
-        group = highlight_group
       }
     end
   },

@@ -16,16 +16,19 @@ return function()
   local type_defined = type ~= ""
 
   local content = table.concat({
-    icon,
-    icon_defined and "  " or "",
+    (utils.width_more_than(35) and icon_defined)
+      and icon .. "  "
+      or "",
 
     name,
 
-    flags_defined and " " or "",
-    flags,
+    (utils.width_more_than(50) and flags_defined)
+      and " " .. flags
+      or "",
 
-    type_defined and "  |  " or "",
-    type,
+    (utils.width_more_than(70) and type_defined)
+      and "  |  " .. type
+      or "",
   })
 
   return content

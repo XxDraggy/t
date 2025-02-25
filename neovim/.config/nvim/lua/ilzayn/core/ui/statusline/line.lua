@@ -23,11 +23,19 @@ return function(separators)
   local location = M.get_line_location()
 
   local content = table.concat({
-    "  ",
-    progress,
-    "  |  ",
+    utils.width_more_than(50)
+      and "  "
+      or " ",
+
+    utils.width_more_than(70) and
+      progress .. "  |  "
+    or "",
+
     location,
-    "  "
+
+    utils.width_more_than(50)
+      and "  "
+      or " ",
   })
 
   return utils.highlight_module(separators, content)

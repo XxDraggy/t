@@ -15,7 +15,7 @@ return {
           "lua_ls",                 -- lua
           "bashls",                 -- bash
           "clangd",                 -- c, c++, c#
-          "cmake",                  -- make
+          -- "cmake",                  -- make
           "cssls",                  -- css, scss, less
           "tailwindcss",            -- tailwindcss
           "emmet_language_server",  -- emmet

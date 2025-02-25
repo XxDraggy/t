@@ -21,8 +21,8 @@ map("t", "<ESC><ESC>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 map('n', 'x', '"_x')
 
 -- easier save and write
-map("n", "<leader>w", "<CMD>silent w<CR>", { desc = "rite buffer" })
-map("n", "<leader>W", "<CMD>w!<CR>", { desc = "[W]rite and quit" })
+map("n", "<leader>w", ":silent w<CR>", { desc = "[w]rite buffer" })
+map("n", "<leader>W", ":silent w!<CR>", { desc = "force [W]rite buffer" })
 map("n", "<leader>q", "<CMD>q<CR>", { desc = "[q]uit buffer" })
 map("n", "<leader>Q", "<CMD>q!<CR>", { desc = "force [Q]uit buffer" })
 

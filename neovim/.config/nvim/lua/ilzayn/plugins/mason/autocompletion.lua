@@ -20,7 +20,6 @@ return {
       },
     },
     "mikavilpas/blink-ripgrep.nvim",
-    "Shatur/neovim-ayu"
   },
 
   opts = {
@@ -70,7 +69,7 @@ return {
       preset = "luasnip",
     },
     sources = {
-      default = { "lsp", "path", "snippets","lazydev", "buffer", "ripgrep" },
+      default = { "lsp", "path", "snippets","lazydev", "buffer", "ripgrep", "markdown" },
       providers = {
         lazydev = {
           name = "LazyDev",
@@ -78,10 +77,15 @@ return {
           score_offset = 100,
         },
         ripgrep = {
-          module = "blink-ripgrep",
           name = "Ripgrep",
-        }
+          module = "blink-ripgrep",
+        },
+        markdown = {
+          name = "RenderMarkdown",
+          module = "render-markdown.integ.blink",
+        },
       },
+
     },
   },
 

@@ -10,5 +10,8 @@ ripgrep
 zsh
 zsh-completions
 zsh-syntax-highlighting
+starship
 less
 hyprland
+tmux
+man-db
